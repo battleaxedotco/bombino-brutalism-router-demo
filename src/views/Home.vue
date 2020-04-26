@@ -22,7 +22,7 @@ export default {
 <style>
 
 .home-wrapper {
-  min-height: 600px;
+  min-height: 580;
   min-width: 300px;
 }
 </style>

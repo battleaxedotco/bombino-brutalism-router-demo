@@ -18,7 +18,7 @@ export default {
 .about-container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  min-height: 600px;
+  min-height: 580px;
   min-width: 300px;
   height: 100%;
   z-index: 0;
