@@ -33,7 +33,7 @@
           ]
         }
 			]"
-			@contextClick="testClick"
+			@contextClick="testMenuClick"
 			:flyout="[
         {
           label: 'This flyout menu has a JSON structure!'
@@ -53,7 +53,7 @@
       Tabs can easily handle Vue Router navigation for you. "invert" places Tabs at bottom,
       and the routes Array corresponds to the one in ./src/routes.js.
      -->
-    <Tabs invert emit-to-parent :routes="routes" />
+    <Tabs invert emit-to-parent :routes="routes" @click="testClick" @update="testUpdate" />
   </div>
 </template>
 
@@ -88,11 +88,17 @@ export default {
 		]
   }),
   methods: {
-    testClick(item) {
+    testMenuClick(item) {
 			console.log("Context menu click:", item);
     },
     checkMenu(item, index, val) {
 			console.log(item, index, val);
+    },
+    testClick() {
+      console.log('Router item click')
+    },
+    testUpdate(value) {
+      console.log('Update:', value)
     },
     // Can invoke any function as await evalScript(`functionName('${parameterVar}')`) if script is preloaded
     // Check out the "script-path" prop of <Panel> component above for easy script file load.

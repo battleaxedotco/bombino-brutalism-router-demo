@@ -7,7 +7,8 @@
     <title><%= htmlWebpackPlugin.options.productName %></title>
     <script src="./CSInterface.js"></script>
     <script>
-      window.require = require || cep_node.require;
+      if (window.__adobe_cep__)
+        window.require = require || cep_node.require;
     </script>
   </head>
 
