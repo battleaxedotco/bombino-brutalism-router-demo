@@ -53,7 +53,7 @@
       Tabs can easily handle Vue Router navigation for you. "invert" places Tabs at bottom,
       and the routes Array corresponds to the one in ./src/routes.js.
      -->
-    <Tabs invert emit-to-parent :routes="routes" @click="testClick" @update="testUpdate" />
+    <Tabs invert flat emit-to-parent :routes="routes" @click="testClick" @update="testUpdate" />
   </div>
 </template>
 
